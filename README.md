@@ -2,6 +2,9 @@
 
 A RESTful API built with Node.js and Express for creating and managing personal notes. Users can sign up, log in, and perform CRUD operations on their own notes.
 
+**Live API:** https://notes-api-l68l.onrender.com
+_Note: hosted on Render's free tier. The first request may take up to a min if the service has been inactive._
+
 ## Features
 
 - User signup and login
@@ -112,5 +115,4 @@ Authorization: Bearer YOUR_TOKEN
 - Add pagination for notes
 - Add more validation for note updates
 - Add API documentation
-- Deploy the API
 - Build a frontend for the API

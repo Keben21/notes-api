@@ -19,6 +19,9 @@ _Note: hosted on Render's free tier. The first request may take up to a min if t
 - Request validation
 - Login rate limiting
 - Users can only access their own notes
+- Refresh token authentication
+- Logout (revokes refresh token)
+- Forgot password / Reset password through emaill
 
 ## Built With
 
@@ -31,6 +34,7 @@ _Note: hosted on Render's free tier. The first request may take up to a min if t
 - express-validator
 - express-rate-limit
 - dotenv
+- Resend (for email sending)
 
 ## Getting Started
 
@@ -52,6 +56,8 @@ Create a `.env` file in the root directory:
 PORT=5000
 MONGO_URL=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
+JWT_REFRESH_SECRET=your_refresh_token_secret
+RESEND_API_KEY=your_resend_api_key
 ```
 
 Start the server:
@@ -76,6 +82,10 @@ You can use Postman or another API testing tool to test the endpoints.
 
 | POST | `/api/auth/signup` | Create a new account |
 | POST | `/api/auth/login` | Log in and receive a JWT |
+| POST | `/api/auth/refresh` | Get a new access token using a reset token |
+| POST | `/api/auth/logout` | Log out and revoke refresh token |
+| POST | `/api/auth/forgot-password` | Request a password reset email |
+| POST | `/api/auth/reset-password` | Reset password using email token |
 
 ### Notes
 

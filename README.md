@@ -41,7 +41,7 @@ _Note: hosted on Render's free tier. The first request may take up to a min if t
 Clone the repository:
 
 ```bash
-git clone YOUR_REPOSITORY_URL
+git clone https://github.com/Keben21/notes-api
 ```
 
 Install dependencies:
